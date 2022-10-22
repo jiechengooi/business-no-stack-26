@@ -1,65 +1,157 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { Styled, jsx } from 'theme-ui';
+import Image from 'next/image';
+
+import Section from '../src/components/Section';
+import Layout from '../src/components/Layout';
+import Separator from '../src/components/Separator';
+import QuoteCarousel from '../src/components/QuoteCarousel';
+import Button from '../src/components/Button';
+import Link from '../src/components/Link';
+import PhoneIcon from '../src/images/Phone';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+    <Layout>
+      <Section spacing={5}>
+        <div sx={{ position: 'relative' }}>
+          <div sx={{
+            textAlign: ['left', 'right', 'right'], pt: 7, pb: 6, width: ['100%', '60%', '40%'],
+          }}
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
+            <Styled.h2>
+              Business 
+              <br />
+              Development
+            </Styled.h2>
+            <Styled.p sx={{ letterSpacing: 3, color: 'rgba(34,34,34, .75)' }}>We are here to help you to expand your business</Styled.p>
+          </div>
+          <div
+            sx={{
+              position: 'absolute',
+              top: 0,
+              right: -50,
+              width: '60%',
+              display: ['none', 'none', 'block'],
+            }}
           >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            <Image
+              alt="business"
+              src="/hero-blob.png"
+              height={400}
+              width={500}
+              quality={60}
+              layout="responsive"
+              priority
+            />
+          </div>
         </div>
-      </main>
+      </Section>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Section bgColor="muted">
+
+        <div sx={{
+          pt: [0, 2, 5],
+          pb: 5,
+          maxWidth: 800,
+          textAlign: ['center'],
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }}
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+
+          <Styled.h2>
+            Quote for Business owner
+          </Styled.h2>
+          <Separator
+            styles={{
+              mt: 4,
+              mb: 4,
+              ml: 'auto',
+              mr: 'auto',
+            }}
+          />
+
+          <QuoteCarousel />
+
+        </div>
+      </Section>
+      <Section spacing={5}>
+        <div
+          sx={{
+            display: ['none', 'none', 'block'],
+            position: 'absolute',
+            top: 50,
+            left: -3,
+            width: '52%',
+          }}
+        >
+          <Image
+            alt="business-2"
+            src="/business-2.jpg"
+            height={600}
+            width={600}
+            quality={100}
+          />
+        </div>
+        <div sx={{ pl: ['0', '0', '55%'], mb: 3 }}>
+          <div sx={{
+            pt: 2,
+            pb: 4,
+            display: ['block', 'none'],
+            '> div': {
+              borderRadius: 0,
+            },
+          }}
+          >
+            <Image
+              alt="business-2"
+              src="/business-2.jpg"
+              layout="responsive"
+              height={400}
+              width={400}
+              objectFit="cover"
+              objectPosition="center center"
+              quality={80}
+            />
+          </div>
+          <div sx={{ maxWidth: [420, 550] }}>
+            <Styled.h2 sx={{ mb: 4 }}>
+              Take our services to bring your business to 
+              {' '}
+              <br sx={{ display: ['none', 'block'] }} />
+              the next Level
+            </Styled.h2>
+            <Styled.p sx={{ fontFamily: 'heading', fontWeight: 700, mb: 2 }}>Red Ocean</Styled.p>
+            <Styled.p sx={{ mb: 3 }}>competing in industries that are currently in existence. This often requires overcoming an intense level of competition and can often involve the commoditization of the industry where companies are competing mainly on price</Styled.p>
+            <Styled.p sx={{ fontFamily: 'heading', fontWeight: 700, mb: 2 }}>Blue Ocean</Styled.p>
+            <Styled.p sx={{ mb: 3 }}>A blue ocean strategy is based on creating demand that is not currently in existence, rather than fighting over it with other companies. You must keep in mind that there is a deeper potential of the marketplace that hasn’t been explored yet.</Styled.p>
+            <Link to="/options">
+              <Button outline>See Our Options</Button>
+            </Link>
+          </div>
+        </div>
+      </Section>
+
+      <Section bgColor="muted">
+        <div sx={{
+          textAlign: 'center',
+          maxWidth: 600,
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }}
+        >
+          <Styled.h2>Get In Touch</Styled.h2>
+          <Styled.p sx={{ mb: 4 }}>We would love to hear from you. Give us a call and we can schedule a time for us to check out your property and give you a free bid.</Styled.p>
+          <Link to="tel:8014449944" styles={{ display: 'inline-block' }}>
+            <Button>
+              <PhoneIcon sx={{ mr: 2 }} />
+              +60 123456789
+            </Button>
+          </Link>
+        </div>
+      </Section>
+    </Layout>
+  );
 }

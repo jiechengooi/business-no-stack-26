@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-props-no-spreading */
+import { ThemeProvider } from 'theme-ui';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import theme from '../src/utils/theme';
+import 'fontsource-poppins';
+import '../node_modules/normalize.css/normalize.css';
 
-export default MyApp
+const App = ({ Component, pageProps }) => (
+  <ThemeProvider theme={theme}>
+    <Component {...pageProps} />
+  </ThemeProvider>
+);
+
+export default App;
