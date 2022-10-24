@@ -57,19 +57,22 @@ const Footer = () => (
             }}
           >
 
-            <div sx={{ mr: 3 }}>
+            <div sx={{ mr: 2 }}>
               <FooterLink to="/" text="Home" />
+            </div>
+            <div sx={{ mr: 2 }}>
               <FooterLink to="/options" text="Options" />
             </div>
-
-            <div>
+            <div sx={{ mr: 2 }}>
               <FooterLink to="/gallery" text="Gallery" />
+            </div>
+            <div sx={{ mr: 2 }}>
               <FooterLink to="/contact" text="Contact" />
             </div>
           </div>
         </div>
 
-        <div sx={{ ml: [0, 4] }}>
+        <div sx={{ ml: [0, 8] }}>
           <Styled.p sx={{
             fontFamily: 'heading',
             fontWeight: 700,
@@ -81,6 +84,8 @@ const Footer = () => (
 
           <div>
             <FooterLink to="tel:60123456789" text="+60123456789" />
+          </div>
+          <div>
             <FooterLink to="mailto:info@gmail.com" text="info@gmail.com" />
           </div>
 
