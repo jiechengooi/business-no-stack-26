@@ -109,11 +109,11 @@ export default function Home() {
               alt="business-2"
               src="/business-2.jpg"
               layout="responsive"
-              height={400}
+              height={700}
               width={400}
               objectFit="cover"
               objectPosition="center center"
-              quality={80}
+              quality={100}
             />
           </div>
           <div sx={{ maxWidth: [420, 550] }}>
@@ -128,12 +128,61 @@ export default function Home() {
             <Styled.p sx={{ fontFamily: 'heading', fontWeight: 700, mb: 2 }}>Blue Ocean</Styled.p>
             <Styled.p sx={{ mb: 3 }}>A blue ocean strategy is based on creating demand that is not currently in existence, rather than fighting over it with other companies. You must keep in mind that there is a deeper potential of the marketplace that hasn’t been explored yet.</Styled.p>
             <Link to="/options">
-              <Button outline>See Our Options</Button>
+              <Button outline>Check our services</Button>
             </Link>
           </div>
         </div>
       </Section>
-
+      <Section spacing={5}>
+        <div
+          sx={{
+            display: ['none', 'none', 'block'],
+            position: 'absolute',
+            top: 50,
+            left: -3,
+            width: '52%',
+          }}
+        >
+          <Image
+            alt="group"
+            src="/group.jpg"
+            height={400}
+            width={600}
+            quality={100}
+          />
+        </div>
+        <div sx={{ pl: ['0', '0', '55%'], mb: 3 }}>
+          <div sx={{
+            pt: 2,
+            pb: 4,
+            display: ['block', 'none'],
+            '> div': {
+              borderRadius: 0,
+            },
+          }}
+          >
+            <Image
+              alt="business-3"
+              src="/group.jpg"
+              layout="responsive"
+              height={700}
+              width={400}
+              objectFit="cover"
+              objectPosition="center center"
+              quality={100}
+            />
+          </div>
+          <div sx={{ maxWidth: [420, 550] }}>
+            <Styled.h2 sx={{ mb: 4 }}>
+              Why Choose us?
+            </Styled.h2>
+            <Styled.p sx={{ fontFamily: 'heading', fontWeight: 700, mb: 2 }}>Experienced Team</Styled.p>
+            <Styled.p sx={{ mb: 3 }}>We have experienced team in handling our client project. Each expertise in the team have more than 10 years experiences.</Styled.p>
+            <Styled.p sx={{ fontFamily: 'heading', fontWeight: 700, mb: 2 }}>Trustworthy Partner</Styled.p>
+            <Styled.p sx={{ mb: 3 }}>We have a good reputation within the sector.Our client have positive feedback from our partnership. We keep customer confidentiality to the highest.</Styled.p>
+          </div>
+        </div>
+      </Section>
       <Section bgColor="muted">
         <div sx={{
           textAlign: 'center',

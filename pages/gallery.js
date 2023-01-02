@@ -11,11 +11,14 @@ import GalleryImage from '../src/components/GalleryImage';
 
 export default function Gallery() {
   return (
-    <Layout title="American Curb - Gallery" description="American Curb landscape curbing image gallery. Landscape curbing professionals serving Utah for over 25 years.">
+    <Layout title="Gallery" description="">
       <Section spacing={3}>
         <div sx={{ pt: 7 }}>
           <Styled.h1 sx={{ textAlign: 'center' }}>GALLERY</Styled.h1>
         </div>
+        <div sx={{ maxWidth: 650, textAlign: 'center', margin: 'auto' }}>
+            <Styled.p>Business services are a recognisable subset of economic services, and share their characteristics. The essential difference is that businesses are concerned about the building of service systems in order to deliver value to their customers and to act in the roles of service provider and service consumer.</Styled.p>
+          </div>
       </Section>
       <Section>
         <div sx={{

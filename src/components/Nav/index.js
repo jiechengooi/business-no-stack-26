@@ -44,7 +44,7 @@ const Nav = () => {
           styles={{ display: 'flex' }}
           aria-label="Home"
         >
-          <h1> Business App</h1>
+          <h1 styles={{marginLeft: '10px'}}> Business App</h1>
         </Link>
         <div
           sx={{

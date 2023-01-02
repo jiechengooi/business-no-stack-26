@@ -4,7 +4,6 @@ import { jsx, Styled } from 'theme-ui';
 
 import Link from '../Link';
 import FooterLink from './FooterLink';
-import AmericanCurbLogo from '../../images/AmericanCurb';
 
 const Footer = () => (
   <div sx={{
@@ -61,7 +60,7 @@ const Footer = () => (
               <FooterLink to="/" text="Home" />
             </div>
             <div sx={{ mr: 2 }}>
-              <FooterLink to="/options" text="Options" />
+              <FooterLink to="/options" text="Service" />
             </div>
             <div sx={{ mr: 2 }}>
               <FooterLink to="/gallery" text="Gallery" />

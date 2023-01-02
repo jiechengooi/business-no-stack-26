@@ -10,7 +10,7 @@ import PhoneIcon from '../src/images/Phone';
 
 export default function Contact() {
   return (
-    <Layout title="Business site - Contact Us" description="Get in touch with us for a free quote.">
+    <Layout title="Contact Us" description="">
       <Section spacing={3}>
         <div sx={{ pt: 7 }}>
           <Styled.h1 sx={{ textAlign: 'center' }}>CONTACT US</Styled.h1>
