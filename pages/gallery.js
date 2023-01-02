@@ -54,11 +54,11 @@ export default function Gallery() {
         }}
         >
           <Styled.h2>Like What You See?</Styled.h2>
-          <Styled.p sx={{ mb: 4 }}>We’d love to make your yard look beautiful too! Give us a call and schedule a time for us to come and give you a free bid.</Styled.p>
+          <Styled.p sx={{ mb: 4 }}>Interested to know more about us? Give us a call or whatsapps us ar</Styled.p>
           <Link to="tel:8014449944" styles={{ display: 'inline-block' }}>
             <Button>
               <PhoneIcon sx={{ mr: 2 }} />
-              801.444.9944
+              +60123456789
             </Button>
           </Link>
         </div>
